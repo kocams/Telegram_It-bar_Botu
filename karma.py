@@ -27,7 +27,7 @@ async def help(_, message):
     await message.reply_text(
         """+ To Upvote A Message.
 - To Downvote A Message.
-/karma To Check Karma Points Of This Group."""
+/itibar komutunu kullanarak grubun en çok teşekkür alan üyelerini görebilirsiniz."""
     )
 
 
@@ -98,7 +98,7 @@ async def downvote(_, message):
     )
 
 import operator
-@app.on_message(filters.command(["karma"]) & filters.group)
+@app.on_message(filters.command(["itibar"]) & filters.group)
 async def karma(_, message):
     chat_id = message.chat.id
     filename = f"{chat_id}.json"
@@ -123,13 +123,13 @@ async def karma(_, message):
         await message.reply_text(f'Total Points: {members[f"{user_id}"]}')
 
 
-@app.on_message(filters.command(["backup"]) & filters.user(owner_id))
+@app.on_message(filters.command(["yedek"]) & filters.user(owner_id))
 async def backup(_, message):
-    m = await message.reply_text("Sending..")
+    m = await message.reply_text("Çıktı alınıyor...")
     files = glob.glob("*n")
     for i in files:
         await app.send_document(owner_id, i)
-    await m.edit("Backup Sent In Your PM")
+    await m.edit("Yedek alındı ve özelden gönderildi.")
 
 
 app.run()
