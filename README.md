@@ -14,7 +14,7 @@ Python ile hazırlanmış Telegram botu. Bu botu grubunuza eklediğiniz takdirde
 ## Kurulum
 
 1. `git clone https://github.com/kocams/Telegram_Itibar_Botu`
-2. `cd Telegram_Karma_Bot`
+2. `cd Telegram_Itibar_Botu`
 3. `pip3 install -r requirements.txt`
 4. `cp sample_config.py config.py`
 5. `config.py` düzenleyin
