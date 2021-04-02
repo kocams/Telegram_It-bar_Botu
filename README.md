@@ -20,3 +20,9 @@ gram Voice-Chat Bot To Play Music From Various Sources In Your Group
 4. `cp sample_config.py config.py`
 5. Edit `config.py` with your own values.
 6. Run the bot `python3 karma.py`
+
+
+
+## Run
+
+https://github.com/thehamkercat/Telegram_Karma_Bot
