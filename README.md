@@ -23,6 +23,6 @@ gram Voice-Chat Bot To Play Music From Various Sources In Your Group
 
 
 
-## Run
+## Credit
 
 https://github.com/thehamkercat/Telegram_Karma_Bot
