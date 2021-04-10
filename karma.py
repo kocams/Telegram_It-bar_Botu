@@ -18,16 +18,14 @@ regex_downvote = r"^(\-|\-\-|\-1|beğenmedim|kötü|berbat|👎)$"
 @app.on_message(filters.command(["start"]))
 async def start(_, message):
     await message.reply_text(
-        "Hey, I'm A Karma Bot, You Can Upvote Or Downvote Someone Using Me, Join @TheHamkerChat For Support!"
+        "Bot sorunsuz başlatıldı, hemen grubuna ekle ve o özlenen forum günlerinde olduğu gibi mesajları puanla! \n⚠️: Botun çalışması için yönetici olması şart. \n👨🏻‍🔧: @Mskoca"
     )
 
 
 @app.on_message(filters.command(["help"]))
 async def help(_, message):
     await message.reply_text(
-        """+ To Upvote A Message.
-- To Downvote A Message.
-/itibar komutunu kullanarak grubun en çok teşekkür alan üyelerini görebilirsiniz."""
+        """Grup içerisindeki herhangi bir mesajı "+" koyarak yanıtlarsanız mesaj sahibinin teşkkür puanını arttırırsınız, "-" koyarak yanıtlarsanız da tam tersi şekilde mesaj sahibinin teşekkür puanını düşürürsünüz. \n/itibar komutunu kullanarak grubun en çok teşekkür alan üyelerini görebilirsiniz."""
     )
 
 
