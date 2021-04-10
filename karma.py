@@ -11,8 +11,8 @@ app = Client(
     api_hash="eb06d4abfb49dc3eeb1aeb98ae0f581e",
 )
 
-regex_upvote = r"^((?i)\+|\+\+|\+1|thx|tnx|ty|thank you|thanx|thanks|pro|cool|good|👍)$"
-regex_downvote = r"^(\-|\-\-|\-1|👎)$"
+regex_upvote = r"^((?i)\+|\+\+|\+1|thx|tnx|ty|thank you|thanx|thanks|teşekkürler|eline sağlık|harika|beğendim|teşekkür ederim|pro|cool|good|👍)$"
+regex_downvote = r"^(\-|\-\-|\-1|beğenmedim|kötü|berbat|👎)$"
 
 
 @app.on_message(filters.command(["start"]))
@@ -61,7 +61,7 @@ async def upvote(_, message):
     with open(filename, "w") as f3:
         f3.write(json.dumps(members))
     await message.reply_text(
-        f'Incremented Karma of {user_mention} By 1 \nTotal Points: {members[f"{user_id}"]}'
+        f'{user_mention} isimli kullanıcının itibar puanı 1 arttı 👍! \nToplam Puanı: {members[f"{user_id}"]}'
     )
 
 
@@ -94,7 +94,7 @@ async def downvote(_, message):
     with open(filename, "w") as f3:
         f3.write(json.dumps(members))
     await message.reply_text(
-        f'Decremented Karma Of {user_mention} By 1 \nTotal Points: {members[f"{user_id}"]}'
+        f'{user_mention} isimli kullanıcının itibar puanı 1 azaltıldı 👎! \nToplam Puanı: {members[f"{user_id}"]}'
     )
 
 import operator
