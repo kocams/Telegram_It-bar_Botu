@@ -12,20 +12,20 @@ app = Client(
 )
 
 regex_upvote = r"^((?i)\+|\+\+|\+1|thx|tnx|ty|thank you|thanx|thanks|teşekkürler|eline sağlık|harika|beğendim|teşekkür ederim|pro|cool|good|👍)$"
-regex_downvote = r"^(\-|\-\-|\-1|beğenmedim|kötü|berbat|👎)$"
+regex_downvote = r"^(\-|\-\-|\-1|beğenmedim|kötü|napim|berbat|👎)$"
 
 
 @app.on_message(filters.command(["start"]))
 async def start(_, message):
     await message.reply_text(
-        "Bot sorunsuz başlatıldı, hemen grubuna ekle ve o özlenen forum günlerinde olduğu gibi mesajları puanla! \n⚠️: Botun çalışması için yönetici olması şart. \n👨🏻‍🔧: @Mskoca"
+        "Bot sorunsuz başlatıldı, hemen grubunuza ekleyin ve o özlenen forum günlerinde olduğu gibi mesajları puanlayın! Detaylı bilgi için /help komutunu kullanız. \n\n⚠️: Botun çalışması için yönetici olması şart \n👨🏻‍🔧: @Mskoca"
     )
 
 
 @app.on_message(filters.command(["help"]))
 async def help(_, message):
     await message.reply_text(
-        """Grup içerisindeki herhangi bir mesajı + koyarak yanıtlarsanız mesaj sahibinin teşkkür puanını arttırırsınız - koyarak yanıtlarsanız da tam tersi şekilde mesaj sahibinin teşekkür puanını düşürürsünüz. \n/itibar komutunu kullanarak grubun en çok teşekkür alan üyelerini görebilirsiniz."""
+        """Grup içerisindeki herhangi bir mesajı + koyarak yanıtlarsanız mesaj sahibinin teşekkür puanını arttırırsınız - koyarak yanıtlarsanız da tam tersi şekilde mesaj sahibinin teşekkür puanını düşürürsünüz. \n/itibar komutunu kullanarak grubun en çok teşekkür alan üyelerini görebilirsiniz."""
     )
 
 
@@ -59,7 +59,7 @@ async def upvote(_, message):
     with open(filename, "w") as f3:
         f3.write(json.dumps(members))
     await message.reply_text(
-        f'{user_mention} isimli kullanıcının itibar puanı 1 arttı 👍! \nToplam Puanı: {members[f"{user_id}"]}'
+        f'{user_mention} isimli kullanıcının itibar puanı 1 arttı 👍 \nToplam Puanı: {members[f"{user_id}"]}'
     )
 
 
@@ -92,7 +92,7 @@ async def downvote(_, message):
     with open(filename, "w") as f3:
         f3.write(json.dumps(members))
     await message.reply_text(
-        f'{user_mention} isimli kullanıcının itibar puanı 1 azaltıldı 👎! \nToplam Puanı: {members[f"{user_id}"]}'
+        f'{user_mention} isimli kullanıcının itibar puanı 1 azaltıldı 👎 \nToplam Puanı: {members[f"{user_id}"]}'
     )
 
 import operator
