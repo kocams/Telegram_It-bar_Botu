@@ -18,7 +18,7 @@ regex_downvote = r"^(\-|\-\-|\-1|beğenmedim|kötü|napim|çöp|berbat|👎)$"
 @app.on_message(filters.command(["start"]))
 async def start(_, message):
     await message.reply_text(
-        "Bot sorunsuz başlatıldı, hemen grubunuza ekleyin ve o özlenen forum günlerinde olduğu gibi mesajları puanlayın! Detaylı bilgi için /help komutunu kullanız. \n\n⚠️: Botun çalışması için yönetici olması şart \n👨🏻‍🔧: @Mskoca"
+        "Bot sorunsuz başlatıldı, hemen grubunuza ekleyin ve o özlenen forum günlerinde olduğu gibi mesajları puanlayın! Detaylı bilgi için /help komutunu kullanın. \n\n⚠️: Botun çalışması için yönetici olması şart \n👨🏻‍🔧: @Mskoca"
     )
 
 
