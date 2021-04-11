@@ -25,7 +25,7 @@ async def start(_, message):
 @app.on_message(filters.command(["help"]))
 async def help(_, message):
     await message.reply_text(
-        """Grup içerisindeki herhangi bir mesajı "+" koyarak yanıtlarsanız mesaj sahibinin teşkkür puanını arttırırsınız, "-" koyarak yanıtlarsanız da tam tersi şekilde mesaj sahibinin teşekkür puanını düşürürsünüz. \n/itibar komutunu kullanarak grubun en çok teşekkür alan üyelerini görebilirsiniz."""
+        """Grup içerisindeki herhangi bir mesajı + koyarak yanıtlarsanız mesaj sahibinin teşkkür puanını arttırırsınız - koyarak yanıtlarsanız da tam tersi şekilde mesaj sahibinin teşekkür puanını düşürürsünüz. \n/itibar komutunu kullanarak grubun en çok teşekkür alan üyelerini görebilirsiniz."""
     )
 
 
