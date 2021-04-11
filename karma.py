@@ -12,7 +12,7 @@ app = Client(
 )
 
 regex_upvote = r"^((?i)\+|\+\+|\+1|thx|tnx|ty|thank you|thanx|thanks|teşekkürler|eline sağlık|harika|beğendim|teşekkür ederim|pro|cool|good|👍)$"
-regex_downvote = r"^(\-|\-\-|\-1|beğenmedim|kötü|napim|berbat|👎)$"
+regex_downvote = r"^(\-|\-\-|\-1|beğenmedim|kötü|napim|çöp|berbat|👎)$"
 
 
 @app.on_message(filters.command(["start"]))
